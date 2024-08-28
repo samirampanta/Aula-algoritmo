@@ -1,22 +1,32 @@
 Algoritmo "salario"
-// Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   : Antonio Carlos Nicolodi 
-// Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 14/08/2024
+
 Var
 // Seção de Declarações das variáveis 
-   salario: real
-   nome: caracter
-
+  nome: caractere
+  idade, salario, s: real
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-     escreva ("Digite seu nome")
-     leia (nome)
-     escreva ("Digite seu salário")
-     leia (salario)
-     salario <- salario*0.285
-     escreva ("Nome: ",nome," Novo saláro: ", salario)
-     
+  escreva ("Digite seu nome: ")
+  leia (nome)
+  escreva ("Digite sua idade: ")
+  leia (idade)
+  escreva ("Digite seu salário: ")
+  leia (salario)
+  
+  se (idade <= 35) entao
+  s <-(salario*0.12)+salario
+  escreva("Seu novo salário será igual a: ",s)
+  fimse
+  
+  se (idade>=36)ou (idade<50) entao
+  s <-(salario*0.145)+salario
+  escreva("Seu novo salário será igual a: ",s)
+  fimse
+  
+  se (idade > 50) entao
+  s <-(salario*0.17)+salario
+  escreva("Seu novo salário será igual a: ",s)
+  fimse
+   
 
 Fimalgoritmo
